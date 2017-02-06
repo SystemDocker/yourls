@@ -1,0 +1,9 @@
+[Unit]
+Description=Your Own URL Shortener: %I
+
+[Service]
+# SystemDocker configuration
+Environment='DOCKER_IMAGE=bios/docker-yourls'
+
+# Set the site based on the instance name
+Environment='DOCKER_ENV_YOURLS_SITE=YOURLS_SITE=http://%i'
